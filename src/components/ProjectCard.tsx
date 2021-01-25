@@ -6,43 +6,48 @@ import {
     Grid,
     Img,
     useColorMode
-} from "@chakra-ui/core";
+} from "@chakra-ui/react";
 import React, { Fragment } from "react";
-
-const ProjectCard: React.FC = () => {
+import { IProject } from "./Projects";
+interface ProjectCardProps {
+    project: IProject;
+}
+const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
     const { colorMode } = useColorMode();
     const bgColor = { light: "gray.100", dark: "gray.900" };
 
     return (
         <Fragment>
-            <Grid
-                gridTemplateColumns="1fr 2fr"
+            <Flex
                 w="100%"
+                direction={{ base: "column-reverse", lg: "row" }}
+                mb={{ base: "20px", xl: "40px" }}
                 boxShadow="0px 9px 24px rgba(0,0,0, .04)"
             >
                 <Flex direction="column" p="50px 30px 0 30px" h="100%">
                     <Box mb="20px">
                         <Text fontSize="18px" color="gray.500" mb="10px">
-                            Full stack
+                            {project.coverage}
                         </Text>
                         <Text fontSize="20px" fontWeight="900">
-                            Burger Restaurant
+                            {project.title}
                         </Text>
-                        <Text fontSize="16px">
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Perspiciatis.
-                        </Text>
+                        <Text fontSize="16px">{project.description}</Text>
                     </Box>
                     <Box>
-                        <ChakraLink href="/">Details</ChakraLink>
+                        <ChakraLink href={project.linkUrl}>Details</ChakraLink>
                     </Box>
                 </Flex>
                 <Flex
                     backgroundColor={bgColor[colorMode]}
-                    h="400px"
+                    h={{ base: "250px", lg: "400px" }}
                     justifyContent="center"
                 >
-                    <ChakraLink href="/" display="flex" justifyContent="center">
+                    <ChakraLink
+                        href={project.visitUrl}
+                        display="flex"
+                        justifyContent="center"
+                    >
                         <Img
                             height="100%"
                             src="./img/burgerscreenshot.png"
@@ -50,7 +55,7 @@ const ProjectCard: React.FC = () => {
                         />
                     </ChakraLink>
                 </Flex>
-            </Grid>
+            </Flex>
         </Fragment>
     );
 };

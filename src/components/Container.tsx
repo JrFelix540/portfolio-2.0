@@ -1,9 +1,11 @@
-import { Box, FlexProps } from "@chakra-ui/core";
+import { Box } from "@chakra-ui/react";
 
-type ContainerProps = FlexProps & {
-    maxW: string;
+export const Container: React.FC = ({ children }) => {
+    return (
+        <Box margin="0 auto" maxW="1200px" p={{ base: "20px", xl: "0px" }}>
+            {children}
+        </Box>
+    );
 };
 
-export const Container = (props: ContainerProps) => {
-    return <Box margin="0 auto" {...props} />;
-};
+export default Container;

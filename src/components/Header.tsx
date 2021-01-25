@@ -1,12 +1,11 @@
-import { Flex, List, Link as ChakraLink } from "@chakra-ui/core";
+import { Flex, List, Link as ChakraLink } from "@chakra-ui/react";
 import React, { Fragment } from "react";
 import { DarkModeSwitch } from "./DarkModeSwitch";
-import { Container } from "./Container";
-
+import Container from "./Container";
 const Header: React.FC = () => {
     return (
         <Fragment>
-            <Container maxW="1140px">
+            <Container>
                 <Flex
                     margin="20px 10px"
                     direction="row"

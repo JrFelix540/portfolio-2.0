@@ -1,42 +1,34 @@
-import { Box, Button, Text, Link as ChakraLink, Flex } from "@chakra-ui/core";
+import { Box, Button, Text, Link as ChakraLink, Flex } from "@chakra-ui/react";
 import React, { Fragment } from "react";
-import { Container } from "./Container";
-
+import Container from "./Container";
 const Hero: React.FC = () => {
     return (
         <Fragment>
-            <Container maxW="1140px">
-                <Box pt="100px">
-                    <Box display="flex">
-                        <Text fontSize="36px" mr="5px">
-                            Hey, I'm Junior Felix, a
-                        </Text>
+            <Container>
+                <Box pt="50px">
+                    <Flex>
                         <Text
-                            fontSize="36px"
-                            fontWeight="700"
-                            textTransform="uppercase"
+                            fontSize={{ base: "20px", md: "24px", xl: "36px" }}
+                            mr="5px"
+                            fontWeight="900"
                         >
-                            Web Developer
+                            Hey, I'm Junior Felix, a Web Developer
                         </Text>
-                    </Box>
-                    <Flex fontSize="24px" mb="20px">
-                        <Text mr="5px">I use</Text>{" "}
-                        <Text mr="5px" fontWeight="700">
-                            React (Typescript)
-                        </Text>
-                        and{" "}
-                        <Text fontWeight="700" ml="5px" mr="5px">
-                            Express / Node
-                        </Text>
-                        <Text> to build websites. </Text>
                     </Flex>
+                    <Text
+                        fontSize={{ base: "16px", md: "18px", xl: "24px" }}
+                        mb="20px"
+                    >
+                        I use React (Typescript) and Express / Node to build
+                        websites.
+                    </Text>
 
                     <Box>
                         <ChakraLink
                             href="mailto:juniorfelix8825@outlook.com"
                             mr="15px"
                         >
-                            <Button variant="solid" variantColor="teal">
+                            <Button variant="solid" backgroundColor="teal">
                                 Talk to Me!
                             </Button>
                         </ChakraLink>

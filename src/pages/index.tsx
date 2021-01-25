@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import { Text } from "@chakra-ui/core";
+import { Text } from "@chakra-ui/react";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 import Projects from "../components/Projects";
