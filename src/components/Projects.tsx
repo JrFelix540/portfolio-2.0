@@ -11,7 +11,7 @@ import MiniProjectCard from "./MiniProjectCard";
 const Projects: React.FC = () => {
     return (
         <Fragment>
-            <Flex justifyContent="center" m="40px 0">
+            <Flex justifyContent="center" m="40px 0" id="projects">
                 <Text fontSize="20px" fontWeight="900">
                     Projects
                 </Text>

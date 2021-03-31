@@ -17,7 +17,7 @@ const Header: React.FC = () => {
                             <ChakraLink href="/" marginRight="15px">
                                 Home
                             </ChakraLink>
-                            <ChakraLink href="/projects" marginRight="15px">
+                            <ChakraLink href="#projects" marginRight="15px">
                                 Projects
                             </ChakraLink>
                             <ChakraLink href="mailto:juniorfelix8825@outlook.com">

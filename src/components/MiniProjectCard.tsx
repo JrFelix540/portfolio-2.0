@@ -8,6 +8,8 @@ interface MiniProjectCardProps {
 }
 
 const MiniProjectCard: React.FC<MiniProjectCardProps> = ({ projects }) => {
+    const bgColor = { light: "#F0F0F0", dark: "gray.700" };
+    const tagColor = { light: "#333", dark: "rgba(255, 255, 255, 0.16)" };
     return (
         <Fragment>
             <Grid
@@ -21,7 +23,7 @@ const MiniProjectCard: React.FC<MiniProjectCardProps> = ({ projects }) => {
                 {projects.map((project) => (
                     <Box
                         key={project.id}
-                        backgroundColor="#F0F0F0"
+                        backgroundColor={bgColor}
                         padding="20px"
                         boxShadow="0px 9px 24px rgba(0,0,0, .04)"
                         borderRadius="10px"
@@ -51,7 +53,7 @@ const MiniProjectCard: React.FC<MiniProjectCardProps> = ({ projects }) => {
                                     key={tag.id}
                                     fontSize="14px"
                                     mr="10px"
-                                    color="#333"
+                                    color={tagColor}
                                     textTransform="uppercase"
                                 >
                                     {tag.tag}

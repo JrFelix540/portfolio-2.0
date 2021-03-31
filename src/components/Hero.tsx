@@ -32,9 +32,6 @@ const Hero: React.FC = () => {
                                 Talk to Me!
                             </Button>
                         </ChakraLink>
-                        <ChakraLink href="/projects">
-                            <Button>See my Work</Button>
-                        </ChakraLink>
                     </Box>
                 </Box>
             </Container>

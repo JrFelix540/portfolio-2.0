@@ -15,7 +15,7 @@ interface ProjectCardProps {
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
     const { colorMode } = useColorMode();
     const bgColor = { light: "gray.100", dark: "gray.900" };
-
+    const tagColor = { light: "#333", dark: "rgba(255, 255, 255, 0.16)" };
     return (
         <Fragment>
             <Flex
@@ -41,7 +41,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
                             <Text
                                 fontSize="14px"
                                 mr="10px"
-                                color="#333"
+                                color={tagColor}
                                 textTransform="uppercase"
                                 key={tag.id}
                             >
