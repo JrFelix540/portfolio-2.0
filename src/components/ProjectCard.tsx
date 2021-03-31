@@ -3,12 +3,12 @@ import {
     Flex,
     Text,
     Link as ChakraLink,
-    Grid,
     Img,
     useColorMode
 } from "@chakra-ui/react";
+import { Github, Link45deg } from "@styled-icons/bootstrap";
 import React, { Fragment } from "react";
-import { IProject } from "./Projects";
+import { IProject } from "../content/projects-content";
 interface ProjectCardProps {
     project: IProject;
 }
@@ -21,38 +21,56 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
             <Flex
                 w="100%"
                 direction={{ base: "column-reverse", lg: "row" }}
-                mb={{ base: "20px", xl: "40px" }}
+                mb={{ base: "40px", xl: "60px" }}
                 boxShadow="0px 9px 24px rgba(0,0,0, .04)"
             >
-                <Flex direction="column" p="50px 30px 0 30px" h="100%">
+                <Flex
+                    direction="column"
+                    p="50px 30px 0 30px"
+                    h="100%"
+                    w={{ base: "100%", lg: "35%" }}
+                >
                     <Box mb="20px">
-                        <Text fontSize="18px" color="gray.500" mb="10px">
-                            {project.coverage}
-                        </Text>
-                        <Text fontSize="20px" fontWeight="900">
+                        <Text fontSize="24px" fontWeight="900">
                             {project.title}
                         </Text>
                         <Text fontSize="16px">{project.description}</Text>
                     </Box>
-                    <Box>
-                        <ChakraLink href={project.linkUrl}>Details</ChakraLink>
-                    </Box>
+                    <Flex mt="5px">
+                        {project.tags.map((tag) => (
+                            <Text
+                                fontSize="14px"
+                                mr="10px"
+                                color="#333"
+                                textTransform="uppercase"
+                                key={tag.id}
+                            >
+                                {tag.tag}
+                            </Text>
+                        ))}
+                    </Flex>
+
+                    <Flex mt="10px">
+                        <ChakraLink href={project.githubUrl} mr="10px">
+                            <Github size="30" />
+                        </ChakraLink>
+                        <ChakraLink href={project.visitUrl}>
+                            <Link45deg size="30" />
+                        </ChakraLink>
+                    </Flex>
                 </Flex>
                 <Flex
                     backgroundColor={bgColor[colorMode]}
-                    h={{ base: "250px", lg: "400px" }}
+                    h={{ base: "250px", lg: "350px" }}
                     justifyContent="center"
+                    w={{ base: "100%", lg: "65%" }}
                 >
                     <ChakraLink
                         href={project.visitUrl}
                         display="flex"
                         justifyContent="center"
                     >
-                        <Img
-                            height="100%"
-                            src="./img/burgerscreenshot.png"
-                            alt=""
-                        />
+                        <Img height="100%" src={project.imageUrl} alt="" />
                     </ChakraLink>
                 </Flex>
             </Flex>

@@ -11,10 +11,12 @@
     "@chakra-ui/react": "^1.1.6",
     "@emotion/react": "^11.1.4",
     "@emotion/styled": "^11.0.0",
+    "@styled-icons/bootstrap": "^10.29.0",
     "framer-motion": "^3.2.2-rc.1",
     "next": "latest",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "styled-components": "^5.2.2"
   },
   "devDependencies": {
     "@types/node": "^14.6.0",
