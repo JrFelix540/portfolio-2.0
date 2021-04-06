@@ -4,7 +4,7 @@ export const Container: React.FC<BoxProps> = (props) => {
     return (
         <Box
             margin="0 auto"
-            maxW="1200px"
+            maxW={{ base: "0px", md: "700px", lg: "900px", xl: "1200px" }}
             p={{ base: "20px", xl: "0px" }}
             {...props}
         >
