@@ -35,6 +35,7 @@ const Index: React.FC = () => {
                     sizes="16x16"
                     href="./img/favicon-16x16.png"
                 />
+                <meta property="og:image" content="./img/banner.png"></meta>
             </Head>
             <Header />
             <Hero />
