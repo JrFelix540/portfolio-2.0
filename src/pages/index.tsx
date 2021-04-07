@@ -9,19 +9,6 @@ const Index: React.FC = () => {
         <Fragment>
             <Head>
                 <title>Junior Felix | Portfolio</title>
-                <meta property="og:type" content="website" />
-                <meta
-                    property="og:title"
-                    content="Junior Felix | Portfolio website"
-                />
-                <meta
-                    property="og:description"
-                    content="A portfolio website created by Junior Felix"
-                />
-                <meta
-                    name="description"
-                    content="A portfolio website created by Junior Felix"
-                />
                 <link rel="icon" type="image/png" sizes="32x32" />
                 <link
                     rel="icon"
@@ -35,7 +22,30 @@ const Index: React.FC = () => {
                     sizes="16x16"
                     href="./img/favicon-16x16.png"
                 />
-                <meta property="og:image" content="./img/banner.png"></meta>
+
+                <meta
+                    name="description"
+                    content="A portfolio website created by Junior Felix"
+                />
+
+                <meta property="og:type" content="website" />
+                <meta property="og:site_name" content="Junior Felix" />
+                <meta
+                    property="og:title"
+                    content="Junior Felix | Portfolio website"
+                />
+                <meta
+                    property="og:description"
+                    content="A portfolio website created by Junior Felix"
+                />
+                <meta
+                    property="og:image"
+                    content="https://junior-felix.vercel.app/img/banner.png"
+                />
+                <meta
+                    property="og:url"
+                    content="https://junior-felix.vercel.app/"
+                />
             </Head>
             <Header />
             <Hero />
