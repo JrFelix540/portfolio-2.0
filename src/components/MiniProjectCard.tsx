@@ -33,18 +33,27 @@ const MiniProjectCard: React.FC<MiniProjectCardProps> = ({ projects }) => {
                                 <Folder size="24" />
                             </Box>
                             <Flex>
-                                <Link href={project.visitUrl} mr="10px">
+                                <Link
+                                    href={project.visitUrl}
+                                    mr="10px"
+                                    target="blank"
+                                >
                                     <Link45deg size="24" />
                                 </Link>
                                 {project.githubUrl.length > 0 && (
-                                    <Link href={project.githubUrl}>
+                                    <Link
+                                        href={project.githubUrl}
+                                        target="blank"
+                                    >
                                         <Github size="24" />
                                     </Link>
                                 )}
                             </Flex>
                         </Flex>
                         <Text fontSize="18px" fontWeight="900" mb="10px">
-                            {project.title}
+                            <Link href={project.visitUrl} target="blank">
+                                {project.title}
+                            </Link>
                         </Text>
                         <Text minH="200px">{project.description}</Text>
                         <Flex>

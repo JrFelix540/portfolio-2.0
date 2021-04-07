@@ -32,7 +32,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
                 >
                     <Box mb="20px">
                         <Text fontSize="24px" fontWeight="900">
-                            {project.title}
+                            <ChakraLink href={project.visitUrl} target="blank">
+                                {project.title}
+                            </ChakraLink>
                         </Text>
                         <Text fontSize="16px">{project.description}</Text>
                     </Box>
@@ -51,10 +53,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
                     </Flex>
 
                     <Flex mt="10px">
-                        <ChakraLink href={project.githubUrl} mr="10px">
+                        <ChakraLink
+                            href={project.githubUrl}
+                            target="blank"
+                            mr="10px"
+                        >
                             <Github size="30" />
                         </ChakraLink>
-                        <ChakraLink href={project.visitUrl}>
+                        <ChakraLink href={project.visitUrl} target="blank">
                             <Link45deg size="30" />
                         </ChakraLink>
                     </Flex>
@@ -67,6 +73,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
                 >
                     <ChakraLink
                         href={project.visitUrl}
+                        target="blank"
                         display="flex"
                         justifyContent="center"
                     >
